@@ -8,14 +8,12 @@ class Bug(models.Model):
     solution=models.TextField(null=True, blank=True)
     reference=models.TextField(null=True, blank=True)
     datetime=models.DateTimeField()
-    name=models.CharField(max_length=48,)
+    name=models.CharField(max_length=48, null=True, blank=True)
 
 
-#    def __str__(self):
-#        if self.name.count()==0:
-#            from datetime import datetime
-#            now=datetime.now.strftime("%d_%B_%Y_%H:%M:%S")
-#            return f"bug_{now}"
-#        else:
-#            return f"bug_{name}"
+    def __str__(self):
+        if self.name:
+            return f"bug_{self.name}_{self.datetime}"
+        else:
+            return f"bug_{self.datetime}"
 
