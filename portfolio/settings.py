@@ -25,7 +25,7 @@ SECRET_KEY = '*=5(2^y@pam%z42kec%+tjlz6krq+i4#(+80pz#$g4vh)tw+&c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.0.0.10","192.168.1.110"]
+ALLOWED_HOSTS = ["10.0.0.10","192.168.1.104"]
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template',],
+        'DIRS': ['template','bug/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
