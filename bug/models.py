@@ -2,8 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Bug(models.Model):
-    issue=models.CharField(max_length=512)
-    discription=models.TextField()
+    issue=models.CharField(max_length=256)
+    status=models.BooleanField(default=False)
+    summary=models.CharField(max_length=512, null=True, blank=True)
+    description=models.TextField()
     visual=models.ImageField(upload_to="bug/images", null=True, blank=True)
     solution=models.TextField(null=True, blank=True)
     reference=models.TextField(null=True, blank=True)
