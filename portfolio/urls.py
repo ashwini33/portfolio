@@ -20,8 +20,9 @@ from django.conf import settings    #custom_configuration
 from django.conf.urls.static import static  #custom_configuration
 
 import project.views
+import base.views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', project.views.index, name='index'),
+    path('', base.views.index, name="homepage"),
     path('bug/', include('bug.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

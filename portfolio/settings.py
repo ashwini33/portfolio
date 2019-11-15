@@ -25,12 +25,13 @@ SECRET_KEY = '*=5(2^y@pam%z42kec%+tjlz6krq+i4#(+80pz#$g4vh)tw+&c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.0.0.26","192.168.1.104"]
+ALLOWED_HOSTS = ["10.0.0.26","192.168.0.10"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'base.apps.BaseConfig',
     'bug.apps.BugConfig',
     'weblog.apps.WeblogConfig',
     'project.apps.ProjectConfig',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template','bug/template'],
+        'DIRS': ['template','bug/template','base/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,8 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+USE_TZ = True
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
