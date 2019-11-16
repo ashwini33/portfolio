@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-  {% include 'base/head.html' %}  
+        {% include 'base/head.html'%}
+
   </head>
   
 <body>
         <header>
         {% include 'base/header.html'%}
          </header>
+         
+         <div class="nav-scroller bg-white shadow-sm">
+  <nav class="nav nav-underline">
+    <a class="nav-link active" href="#">Dashboard</a>
+    <a class="nav-link" href="#">
+      Total 
+      <span class="badge badge-pill bg-light align-text-bottom">{{bugs.count}}</span>
+    </a>
+    <a class="nav-link" href="#">Explore</a>
+    <a class="nav-link" href="#">Suggestions</a>
+    <a class="nav-link" href="#">Link</a>
+  </nav>
+        </div>
 
         
         <main role="main"> 

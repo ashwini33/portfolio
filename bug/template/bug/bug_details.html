@@ -11,7 +11,24 @@
 
       
         <main role="main"> 
-		{{bug.issue}}   
+
+		Issue:  {{bug.issue}} <br>
+		Status: <span style=" 
+	{% if bug.status %}
+      	color:green
+	{% else %}
+	color:red
+	{% endif %}
+		      "> 
+			{{bug.bug_status}} </span> <br>
+
+			      
+		Date: {{bug.datetime}} <br> 
+		Description: {{bug.description}} <br>
+		Solution: {{bug.solution}} <br>
+		Reference: {{bug.reference}} 
+    
+
         </main>
 
 
