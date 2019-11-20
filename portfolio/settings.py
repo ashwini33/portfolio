@@ -25,7 +25,7 @@ SECRET_KEY = '*=5(2^y@pam%z42kec%+tjlz6krq+i4#(+80pz#$g4vh)tw+&c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.0.0.26","192.168.0.10"]
+ALLOWED_HOSTS = ["10.0.0.26","192.168.0.11"]
 
 
 # Application definition
@@ -125,9 +125,15 @@ STATICFILES_DIRS=[
         os.path.join(BASE_DIR, 'portfolio/static/'),
         ]
 
+
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 
 
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
 MEDIA_URL="/media/"
+
+try:
+    from .local_setting import *
+except ImportError:
+    pass
