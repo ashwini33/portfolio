@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base.views.index, name="homepage"),
     path('contact/', base.views.contact, name="contact"),
+    path('dropmessage/', base.views.dropmessage, name="dropmessage"),
+    path('confirm/', base.views.confirm, name="confirm"),
     path('bug/', include('bug.urls')),
     path('weblog/', include('weblog.urls')),
     path('project/', include('project.urls')),

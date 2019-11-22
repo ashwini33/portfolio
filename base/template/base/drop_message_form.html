@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  {% include 'base/head.html' %}  
+  </head>
+  
+<body>
+        <header>
+        {% include 'base/header.html'%}
+         </header>
+
+        
+        <main role="main"> 
+             
+		<form class='container' action="{% url 'confirm' %}">
+ 
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name">
+  </div>
+
+	
+ <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" name="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+        </main>
+
+{% include 'base/footer.html'%}
+{% include 'base/javascript.html'%}
+
+</body>
+</html>
+
