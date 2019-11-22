@@ -24,6 +24,6 @@ def confirm(request):
        f"{message}")
 
     test = telegram_bot_sendtext(full_message)
-    return HttpResponse(email)
+    return HttpResponse(f"Thanks {name}")
 
 
