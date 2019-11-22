@@ -12,7 +12,8 @@
         
         <main role="main"> 
              
-		<form class='container' method="post"action="{% url 'confirm' %}">
+	<form class='container' method="post"action="{% url 'confirm' %}">
+		      {% csrf_token %}
  
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
@@ -29,7 +30,7 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
   </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+	</form>
         </main>
 
 {% include 'base/footer.html'%}

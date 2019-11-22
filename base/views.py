@@ -16,9 +16,9 @@ def dropmessage(request):
     return render(request, 'base/drop_message_form.html')
 def confirm(request):
     from .sendmessage import telegram_bot_sendtext
-    name=str(request.GET["name"])
-    email=str(request.GET["email"])
-    message=str(request.GET["message"])
+    name=str(request.POST["name"])
+    email=str(request.POST["email"])
+    message=str(request.POST["message"])
     full_message=(f"Message from {name} ({email})\n"
        f"Message:\n"
        f"{message}")
