@@ -9,5 +9,7 @@ def index(request):
     projects=Project.objects.order_by('-datetime')[0:3]
     bugs=Bug.objects.order_by('-datetime')[0:5]
     return render(request, 'base/index.html', {"projects":projects,"bugs":bugs,})
+def contact(request):
+    return render(request,'base/contact.html',)
 
 

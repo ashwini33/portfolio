@@ -24,5 +24,9 @@ import base.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base.views.index, name="homepage"),
+    path('contact/', base.views.contact, name="contact"),
     path('bug/', include('bug.urls')),
+    path('weblog/', include('weblog.urls')),
+    path('project/', include('project.urls')),
+
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
