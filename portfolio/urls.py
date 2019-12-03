@@ -24,7 +24,7 @@ import base.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base.views.index, name="homepage"),
-    path('contact/', base.views.contact, name="contact"),
+    path('contact/', base.views.dropmessage, name="contact"),
     path('dropmessage/', base.views.dropmessage, name="dropmessage"),
     path('confirm/', base.views.confirm, name="confirm"),
     path('bug/', include('bug.urls')),
