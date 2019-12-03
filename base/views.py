@@ -24,6 +24,6 @@ def confirm(request):
        f"{message}")
 
     test = telegram_bot_sendtext(full_message)
-    return HttpResponse(f"Thanks {name}. Your response has benn recored.")
+    return HttpResponse(f"Thanks {name}. Your response has been recored.")
 
 
